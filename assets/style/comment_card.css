@@ -1,0 +1,201 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+html .wrapper, body .wrapper {
+  position: relative;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 1140px;
+}
+
+html .wrapper .slideShowContainer, body .wrapper .slideShowContainer {
+  position: absolute;
+  z-index: 2;
+  width: 100%;
+  max-width: 1290px;
+  height: 340px;
+}
+
+html .wrapper .slideShowContainer .slide-nav-btn-style, body .wrapper .slideShowContainer .slide-nav-btn-style {
+  position: absolute;
+  box-sizing: border-box;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
+  width: 44px;
+  height: 44px;
+  border-radius: 100%;
+  background-color: #efefef;
+  transition: all .15s linear;
+  cursor: pointer;
+}
+
+html .wrapper .slideShowContainer .slide-nav-btn-style:hover, body .wrapper .slideShowContainer .slide-nav-btn-style:hover {
+  scale: 1.1;
+  background-color: white;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+
+html .wrapper .slideShowContainer .forwardBtn, body .wrapper .slideShowContainer .forwardBtn {
+  right: 0;
+}
+
+html .wrapper .slideShowContainer .forwardBtn .forward-arrow, body .wrapper .slideShowContainer .forwardBtn .forward-arrow {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin: -7px 0 0 -8px;
+  border: solid #999;
+  border-width: 0 4px 4px 0;
+  display: inline-block;
+  box-sizing: border-box;
+  padding: 5px;
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+}
+
+html .wrapper .slideShowContainer .reverseBtn, body .wrapper .slideShowContainer .reverseBtn {
+  left: 0;
+}
+
+html .wrapper .slideShowContainer .reverseBtn .reverse-arrow, body .wrapper .slideShowContainer .reverseBtn .reverse-arrow {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin: -7px 0 0 -6px;
+  border: solid #999;
+  border-width: 0 4px 4px 0;
+  display: inline-block;
+  padding: 5px;
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+}
+
+html .wrapper .slideshow, body .wrapper .slideshow {
+  position: relative;
+  border-radius: 10px;
+  margin: 0 auto;
+  max-width: 950px;
+  height: 340px;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+
+html .wrapper .slideshow .countContainer, body .wrapper .slideshow .countContainer {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 14px;
+  color: #999;
+}
+
+html .wrapper .slideshow > .cardHolder, body .wrapper .slideshow > .cardHolder {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+}
+
+html .wrapper .slideshow > .cardHolder .quoteContainer, body .wrapper .slideshow > .cardHolder .quoteContainer {
+  position: absolute;
+  background-color: white;
+  box-sizing: border-box;
+  font-size: 20px;
+  line-height: 1.6em;
+  text-align: center;
+  top: 50%;
+  left: calc(50% - 155px);
+  transform: translateY(-50%) translateX(-50%);
+  width: 100%;
+  max-width: 520px;
+  min-height: 20px;
+}
+
+html .wrapper .slideshow > .cardHolder .quoteContainer > p, body .wrapper .slideshow > .cardHolder .quoteContainer > p {
+  color: black;
+}
+
+html .wrapper .slideshow > .cardHolder .quoteContainer .quoteBox, body .wrapper .slideshow > .cardHolder .quoteContainer .quoteBox {
+  position: relative;
+  margin: 0 auto 25px;
+  width: 80px;
+  height: 35px;
+  color: #CCC;
+  background-image: url(../images/quoteMarks.svg);
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+html .wrapper .slideshow > .cardHolder .quoteContainer .attribution, body .wrapper .slideshow > .cardHolder .quoteContainer .attribution {
+  font-size: 20px;
+  height: 16px;
+  font-weight: 800;
+  color: #7B1718;
+  margin: 20px 0 8px 0;
+}
+
+html .wrapper .slideshow > .cardHolder .quoteContainer .location, body .wrapper .slideshow > .cardHolder .quoteContainer .location {
+  font-size: 16px;
+  font-style: italic;
+  letter-spacing: .02em;
+  color: #999;
+}
+
+html .wrapper .slideshow > .cardHolder .branchImg, body .wrapper .slideshow > .cardHolder .branchImg {
+  position: absolute;
+  overflow: hidden;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  z-index: 1;
+  width: 310px;
+  height: 340px;
+  right: 0;
+}
+
+html .wrapper .slideshow > .cardHolder .branchImg .branchName, body .wrapper .slideshow > .cardHolder .branchImg .branchName {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+  color: white;
+  font-size: 14px;
+  letter-spacing: .03em;
+  padding: 4px 10px;
+  z-index: 1;
+  box-sizing: border-box;
+}
+
+html .wrapper .slideshow > .cardHolder .branchImg .branchName p, body .wrapper .slideshow > .cardHolder .branchImg .branchName p {
+  margin: 0;
+  padding: 0;
+}
+
+html .wrapper .slideshow > .cardHolder > img, body .wrapper .slideshow > .cardHolder > img {
+  max-width: 100%;
+  height: auto;
+}
+
+@media only screen and (max-width: 890px) {
+  html .wrapper .branchImg, body .wrapper .branchImg {
+    display: none;
+  }
+  html .wrapper .quoteContainer, body .wrapper .quoteContainer {
+    left: calc(50%) !important;
+  }
+}
+
+@media only screen and (max-width: 590px) {
+  html .wrapper .quoteContainer, body .wrapper .quoteContainer {
+    padding: 0 60px;
+    font-size: 16px !important;
+  }
+}
